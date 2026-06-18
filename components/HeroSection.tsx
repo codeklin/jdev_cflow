@@ -1,7 +1,6 @@
 "use client"
 import React from "react"
 import Image from "next/image"
-import { Link } from "react-scroll/modules"
 
 const HeroSection = () => {
   return (
@@ -62,26 +61,18 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-1">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="px-7 py-4 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-all text-sm uppercase tracking-wider cursor-pointer shadow-lg shadow-[#0d9488]/30"
+              <a
+                href="#contact"
+                className="px-7 py-4 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-all text-sm uppercase tracking-wider shadow-lg shadow-[#0d9488]/30"
               >
                 Book a Free Growth Audit
-              </Link>
-              <Link
-                to="problem"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="px-7 py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold rounded-2xl hover:border-[#0d9488] hover:text-[#0d9488] transition-all text-sm uppercase tracking-wider cursor-pointer"
+              </a>
+              <a
+                href="#problem"
+                className="px-7 py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold rounded-2xl hover:border-[#0d9488] hover:text-[#0d9488] transition-all text-sm uppercase tracking-wider"
               >
                 See How It Works
-              </Link>
+              </a>
             </div>
 
             {/* Social proof strip */}

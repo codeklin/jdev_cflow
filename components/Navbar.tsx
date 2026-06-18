@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react"
-import { Link } from "react-scroll/modules"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
@@ -28,30 +27,25 @@ export default function Navbar() {
     <header className="w-full fixed top-0 z-50 bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-gray-100 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link to="home" className="cursor-pointer flex items-center gap-2">
+        <a href="#home" className="cursor-pointer flex items-center gap-2">
           <span className="text-xl font-black tracking-tight text-[#0a0a0a] dark:text-white">
             {"<J/Dev>"}
           </span>
           <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-black uppercase tracking-widest bg-[#0d9488]/10 text-[#0d9488] rounded-full border border-[#0d9488]/30">
             CAS
           </span>
-        </Link>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-7">
           {NAV_ITEMS.map((item) => (
-            <Link
+            <a
               key={item.page}
-              to={item.page}
-              className="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-[#0d9488] dark:hover:text-[#0d9488] cursor-pointer transition-colors duration-200"
-              activeClass="!text-[#0d9488]"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
+              href={`#${item.page}`}
+              className="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 hover:text-[#0d9488] dark:hover:text-[#0d9488] transition-colors duration-200"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
           <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
@@ -64,16 +58,12 @@ export default function Navbar() {
               <RiMoonFill size={18} className="text-[#0a0a0a]" />
             )}
           </button>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-            className="px-5 py-2 bg-[#0d9488] text-white text-xs font-black uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-colors cursor-pointer"
+          <a
+            href="#contact"
+            className="px-5 py-2 bg-[#0d9488] text-white text-xs font-black uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-colors"
           >
             Free Audit
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile controls */}
@@ -103,31 +93,22 @@ export default function Navbar() {
       {navbar && (
         <div className="md:hidden bg-white dark:bg-[#0a0a0a] border-t border-gray-100 dark:border-white/10 px-4 pb-6 pt-4 space-y-4">
           {NAV_ITEMS.map((item) => (
-            <Link
+            <a
               key={item.page}
-              to={item.page}
-              className="block text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-[#0d9488] cursor-pointer transition-colors"
-              activeClass="!text-[#0d9488]"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
+              href={`#${item.page}`}
               onClick={() => setNavbar(false)}
+              className="block text-sm font-bold uppercase tracking-widest text-gray-600 dark:text-gray-300 hover:text-[#0d9488] transition-colors"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
+          <a
+            href="#contact"
             onClick={() => setNavbar(false)}
-            className="block w-full text-center px-5 py-3 bg-[#0d9488] text-white font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-colors cursor-pointer"
+            className="block w-full text-center px-5 py-3 bg-[#0d9488] text-white font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-colors"
           >
             Book Free Growth Audit
-          </Link>
+          </a>
         </div>
       )}
     </header>

@@ -1,5 +1,4 @@
 "use client"
-import { Link } from "react-scroll/modules"
 
 const CTASection = () => {
   return (
@@ -26,16 +25,12 @@ const CTASection = () => {
 
         {/* Dual CTA */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-            className="px-8 py-5 bg-[#0d9488] text-white font-black text-base uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-all cursor-pointer shadow-2xl shadow-[#0d9488]/30"
+          <a
+            href="#contact"
+            className="px-8 py-5 bg-[#0d9488] text-white font-black text-base uppercase tracking-wider rounded-2xl hover:bg-[#0b7a70] transition-all shadow-2xl shadow-[#0d9488]/30"
           >
             Let&apos;s Build Your Customer System
-          </Link>
+          </a>
           <a
             href="https://wa.me/2347031098097"
             target="_blank"

@@ -1,6 +1,5 @@
 "use client"
 import SlideUp from "./SlideUp"
-import { Link } from "react-scroll/modules"
 
 const packages = [
   {
@@ -136,16 +135,12 @@ const ServicesSection = () => {
                 </ul>
 
                 {/* CTA */}
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                  className={`w-full text-center px-6 py-4 ${pkg.btnBg} text-white text-sm font-black uppercase tracking-wider rounded-2xl transition-colors cursor-pointer block`}
+                <a
+                  href="#contact"
+                  className={`w-full text-center px-6 py-4 ${pkg.btnBg} text-white text-sm font-black uppercase tracking-wider rounded-2xl transition-colors block`}
                 >
                   Get Started — {pkg.name}
-                </Link>
+                </a>
               </div>
             </SlideUp>
           ))}
@@ -155,16 +150,12 @@ const ServicesSection = () => {
         <SlideUp offset="-80px 0px -80px 0px">
           <p className="text-center text-sm text-gray-400 dark:text-gray-500 mt-10">
             Not sure which package fits?{" "}
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="text-[#0d9488] font-bold hover:underline cursor-pointer"
+            <a
+              href="#contact"
+              className="text-[#0d9488] font-bold hover:underline"
             >
               Book a free 30-min audit
-            </Link>{" "}
+            </a>{" "}
             and I&apos;ll tell you exactly what you need.
           </p>
         </SlideUp>

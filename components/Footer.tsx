@@ -1,7 +1,6 @@
 import React from "react"
 import { FaXTwitter, FaSquareWhatsapp } from "react-icons/fa6"
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
-import { Link } from "react-scroll/modules"
 
 const Footer = () => {
   return (
@@ -26,17 +25,13 @@ const Footer = () => {
               { label: "About", to: "about" },
               { label: "Free Audit", to: "contact" },
             ].map((link) => (
-              <Link
+              <a
                 key={link.to}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-[#0d9488] cursor-pointer transition-colors"
+                href={`#${link.to}`}
+                className="text-xs font-bold uppercase tracking-widest text-gray-500 hover:text-[#0d9488] transition-colors"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
         </div>

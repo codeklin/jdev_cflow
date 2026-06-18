@@ -1,6 +1,5 @@
 "use client"
 import SlideUp from "./SlideUp"
-import { Link } from "react-scroll/modules"
 
 const tools = [
   "WhatsApp Business API",
@@ -47,16 +46,12 @@ const AboutSection = () => {
 
               {/* CTA */}
               <div className="flex flex-wrap gap-4 pt-2">
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                  className="px-7 py-3.5 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-colors text-sm uppercase tracking-wider cursor-pointer"
+                <a
+                  href="#contact"
+                  className="px-7 py-3.5 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-colors text-sm uppercase tracking-wider"
                 >
                   Work With Me
-                </Link>
+                </a>
                 <a
                   href="https://wa.me/2347031098097"
                   target="_blank"

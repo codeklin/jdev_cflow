@@ -1,6 +1,5 @@
 "use client"
 import SlideUp from "./SlideUp"
-import { Link } from "react-scroll/modules"
 
 const problems = [
   {
@@ -80,16 +79,12 @@ const ProblemSection = () => {
                 I&apos;ve built these systems for businesses just like yours. Let me show you exactly how.
               </p>
             </div>
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="flex-shrink-0 px-7 py-4 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-colors text-sm uppercase tracking-wider cursor-pointer whitespace-nowrap"
+            <a
+              href="#services"
+              className="flex-shrink-0 px-7 py-4 bg-[#0d9488] text-white font-black rounded-2xl hover:bg-[#0b7a70] transition-colors text-sm uppercase tracking-wider whitespace-nowrap"
             >
               See the Solution →
-            </Link>
+            </a>
           </div>
         </SlideUp>
       </div>
