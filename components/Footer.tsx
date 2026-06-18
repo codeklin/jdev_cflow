@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import { FaXTwitter, FaSquareWhatsapp } from "react-icons/fa6"
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai"
 
@@ -33,6 +34,12 @@ const Footer = () => {
                 {link.label}
               </a>
             ))}
+            <Link
+              href="/portfolio"
+              className="text-xs font-bold uppercase tracking-widest text-[#0d9488] hover:text-[#0b7a70] transition-colors"
+            >
+              Portfolio ↗
+            </Link>
           </nav>
         </div>
 
